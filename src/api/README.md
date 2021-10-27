@@ -1,0 +1,1 @@
+Sufixo REST = geralmente tem uma utilidade client-side, por isso fica separado das funções gerais da API (que podem ser utilizadas até no CLI sem precisar de HTTP)
