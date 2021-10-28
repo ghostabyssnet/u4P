@@ -28,4 +28,3 @@ test('login -> faz login como o user teste:123456', async () => {
     let result: string = await RestClientLogin(user.email, user.senha);
     expect(result).toBe('Credenciais OK!');
 });
-

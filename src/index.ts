@@ -1,7 +1,9 @@
 'use strict';
 import "reflect-metadata";
 import {createConnection} from "typeorm";
+import { ClientNewEvent } from "./api/ClientPage";
 import { RestClientLogin, RestClientRegister } from "./api/UserREST";
+import { Cliente } from "./entity/Cliente";
 const Hapi = require('@hapi/hapi');
 
 createConnection().then(async connection => {
@@ -43,7 +45,6 @@ createConnection().then(async connection => {
                 return h.response(response);
             }
         });
-
         
         
         await server.start();
