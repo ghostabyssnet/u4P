@@ -1,5 +1,4 @@
 import { getConnection, getRepository } from "typeorm";
-import { Usuario } from "../entity/Usuario";
 import { Cliente } from "../entity/Cliente";
 
 // checar se user já existe

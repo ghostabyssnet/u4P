@@ -44,6 +44,8 @@ createConnection().then(async connection => {
             }
         });
 
+        
+        
         await server.start();
         console.log('Server rodando em %s', server.info.uri);
     };

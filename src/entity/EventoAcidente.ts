@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, OneToOne} from "typeorm";
 import { Acidente } from "./Acidente";
 import { Cliente } from "./Cliente";
 import { Terceiro } from "./Terceiro";
@@ -8,9 +8,9 @@ export class EventoAcidente { // aka acidente_envolvidos
     @PrimaryGeneratedColumn()
     id: number;
 
-    @ManyToMany(() => Acidente)
+    @OneToOne(() => Acidente)
     @JoinTable()
-    acidentes: Acidente[];
+    acidente: Acidente;
 
     @ManyToMany(() => Cliente)
     @JoinTable()

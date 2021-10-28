@@ -1,8 +1,13 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
+import { Cliente } from "./Cliente";
 @Entity()
 export class Veiculo {
     @PrimaryGeneratedColumn()
     id: number;
+
+    @OneToOne(() => Cliente)
+    @JoinColumn()
+    dono: Cliente;
 
     @Column()
     placa: string;
