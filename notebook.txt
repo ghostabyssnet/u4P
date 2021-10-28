@@ -36,6 +36,7 @@ x Cargo -- cargos diferentes devem ter permissões diferentes
 
 > veiculo
 x Id
+x dono FK usuario
 x Placa
 x Descricao
 
